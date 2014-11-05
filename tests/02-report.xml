@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuites tests="11" failures="2" time="0.110">
+	<testsuite tests="5" time="0.010" name="TestScenarioOne">
+		<properties>
+			<property name="go.version" value="go1.3"></property>
+		</properties>
+		<testcase classname="TestScenarioOne" name="Given some pre-conditions"></testcase>
+		<testcase classname="TestScenarioOne" name="And other pre-conditions"></testcase>
+		<testcase classname="TestScenarioOne" name="When something happens"></testcase>
+		<testcase classname="TestScenarioOne" name="Then everything is fine"></testcase>
+		<testcase classname="TestScenarioOne" name="And we are cool bro"></testcase>
+	</testsuite>
+	<testsuite tests="6" failures="2" time="0.100" name="TestScenarioTwo">
+		<properties>
+			<property name="go.version" value="go1.3"></property>
+		</properties>
+		<testcase classname="TestScenarioTwo" name="Given some new pre-conditions"></testcase>
+		<testcase classname="TestScenarioTwo" name="When something else happens"></testcase>
+		<testcase classname="TestScenarioTwo" name="Then something broke here">
+			<failure message="Failed" type="">* /home/my project/project_test.go&#xA;Line 100:&#xA;Expected: &#39;-2&#39;&#xA;Actual:   &#39;0&#39;&#xA;(Should be equal)&#xA;* /home/my project/project_test.go&#xA;Line 120:&#xA;Expected: &#39;true&#39;&#xA;Actual:   &#39;false&#39;&#xA;(Should be equal)</failure>
+		</testcase>
+		<testcase classname="TestScenarioTwo" name="And here was everything fine"></testcase>
+		<testcase classname="TestScenarioTwo" name="And here not cool bro">
+			<failure message="Failed" type="">* /home/my project/project_test.go&#xA;Line 300:&#xA;Expected: &#39;false&#39;&#xA;Actual:   &#39;true&#39;&#xA;(Should be equal)</failure>
+		</testcase>
+		<testcase classname="TestScenarioTwo" name="And the last one OK"></testcase>
+	</testsuite>
+</testsuites>

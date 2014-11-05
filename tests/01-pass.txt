@@ -1,0 +1,29 @@
+=== RUN TestScenarioOne
+
+  Scenario One
+    Given some pre-conditions 
+    And other pre-conditions 
+    When something happens 
+    Then everything is fine .
+	And we are cool bro ..
+
+
+3 assertion thus far
+
+--- PASS: TestScenarioOne (0.10 seconds)
+=== RUN TestScenarioTwo
+
+  Scenario Two
+    Given some new pre-conditions 
+    When something else happens 
+    Then nothing broke here ...
+	And here was everything fine .
+	And this one was skipped S
+	And the last one OK too .
+
+
+8 assertion thus far
+
+--- PASS: TestScenarioTwo (1.00 seconds)
+PASS
+ok  	package/name	1.10s

@@ -1,0 +1,50 @@
+=== RUN TestScenarioOne
+
+  Scenario One
+    Given some pre-conditions 
+    And other pre-conditions 
+    When something happens 
+    Then everything is fine .
+	And we are cool bro ..
+
+
+3 assertion thus far
+
+--- PASS: TestScenarioOne (0.10 seconds)
+=== RUN TestScenarioTwo
+
+  Scenario Two
+    Given some new pre-conditions 
+    When something else happens 
+    Then something broke here .x.x
+	And here was everything fine .
+	And here not cool bro ..x
+	And the last one OK .
+
+	
+Failures:
+
+  * /home/my project/project_test.go 
+  Line 100:
+  Expected: '-2'
+  Actual:   '0'
+  (Should be equal)
+
+  * /home/my project/project_test.go 
+  Line 120:
+  Expected: 'true'
+  Actual:   'false'
+  (Should be equal)
+
+  * /home/my project/project_test.go 
+  Line 300:
+  Expected: 'false'
+  Actual:   'true'
+  (Should be equal)
+
+11 assertion thus far
+
+--- FAIL: TestScenarioTwo (1.00 seconds)
+FAIL
+exit status 1
+FAIL	package/name	1.10s
