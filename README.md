@@ -33,11 +33,11 @@ If you are inside a package that has multiple sub-packages, you can test all of 
 
 In linux, you need to set the environment TERM needs to be set to **sh** because goconvey adds colors to the output and that affects the report
 
-    `TERM=sh go test -v | goconvey-junit-report > report.xml`
+    TERM=sh go test -v | goconvey-junit-report > report.xml
 
 Or
 
-    `TERM=sh go test -v ./... | goconvey-junit-report > report.xml`
+    TERM=sh go test -v ./... | goconvey-junit-report > report.xml
 
 //TODOs
 ------
