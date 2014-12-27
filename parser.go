@@ -62,7 +62,7 @@ func initialize(useDot bool) {
 	regexTest = regexp.MustCompile(`(?i)^\s+(Given|When|Then|And)`)
 	regexTestSuccess = regexp.MustCompile(`\s(` + success + `)*$`)
 	regexTestSkip = regexp.MustCompile(`\s` + skip + `$`)
-	regexPackage = regexp.MustCompile(`^--- (PASS|FAIL): (.+) \((\d+\.\d+) seconds\)$`)
+	regexPackage = regexp.MustCompile(`^--- (PASS|FAIL): (.+) \((\d+\.\d+)( seconds|s)\)$`)
 	regexAssertions = regexp.MustCompile(`^\d+ assertion(s)? thus far$`)
 }
 
@@ -119,7 +119,7 @@ func Parse(r io.Reader, useDot bool) (*Report, error) {
 			}
 
 			tests = append(tests, test)
-		} else if matches := regexPackage.FindStringSubmatch(line); len(matches) == 4 {
+		} else if matches := regexPackage.FindStringSubmatch(line); len(matches) == 5 {
 			report.Packages = append(report.Packages, Package{
 				Name:  matches[2],
 				Time:  parseTime(matches[3]),
