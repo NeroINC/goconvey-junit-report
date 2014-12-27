@@ -43,7 +43,8 @@ Or
 ------
 
 1. When multiple packages are tested at the same time using `go test -v ./...` the JUnit Report is not informing to which subpackage each test belongs.
-2. Add a test for linux reports
+2. Add a test for linux reports.
+3. Add examples of _test.go constructed in BDD format.
 
 Credits
 -------
